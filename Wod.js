@@ -1,15 +1,15 @@
 function sequential(s)
 {
+  var sos = 'SOS'
   count = 0;
  for(var i = 0; i < s.length; i++)
-   { 
-     var j = i+1; 
-     
-     if(s[i] == 'S' && s[j] == 'S')
+   {    
+     var seq = s.charAt(i);
+     if(s.charAt(i) != sos.charAt(i%3))
      {
        count++;
      }
    }
   document.write(count);
 }
-sequential("SOSSOT");
+sequential("SOSSOTSPTSOSSOPPOS");
